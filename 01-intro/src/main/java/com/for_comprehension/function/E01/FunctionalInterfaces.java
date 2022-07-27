@@ -46,20 +46,14 @@ final class FunctionalInterfaces {
      * @return a predicate that returns true if integer is bigger than 42
      */
     static IntPredicate L4_to42IntegerPredicate() {
-        return i -> {
-            throw new RuntimeException("TODO");
-
-        };
+        return i -> i > 42;
     }
 
     /**
      * @return a higher-order function that takes an integer and returns a predicate validating if the input is bigger than the provided value
      */
     static Function<Integer, Predicate<Integer>> L5_toIntegerPredicate() {
-        return i -> {
-            throw new RuntimeException("TODO");
-
-        };
+        return param -> threshold -> threshold > param;
     }
 
     /**
