@@ -12,6 +12,9 @@ public class User {
     }
 
     public void addItem(String item) {
+        int foo = 42;
+        System.out.println("foo = " + foo);
+
         Objects.requireNonNull(item);
         items.add(item);
     }

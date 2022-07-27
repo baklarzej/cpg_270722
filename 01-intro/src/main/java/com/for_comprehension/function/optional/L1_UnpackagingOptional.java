@@ -14,7 +14,7 @@ public class L1_UnpackagingOptional {
         List<String> r0 = UserService.getUserById(2)
                 .map(u -> u.getItems())
 //                .get()
-                .orElseThrow() ;// only if you know what you're doing
+                .orElseThrow(); // only if you know what you're doing
 
         List<String> r1 = UserService.getUserById(2)
                 .map(u -> u.getItems())
