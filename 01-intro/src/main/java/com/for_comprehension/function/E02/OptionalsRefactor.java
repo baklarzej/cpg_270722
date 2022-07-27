@@ -2,33 +2,37 @@ package com.for_comprehension.function.E02;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Optional;
 
 class OptionalsRefactor {
 
-    private Person findPerson(int id) {
+    private Optional<Person> findPerson(int id) {
         switch(id) {
             case 1:
-                return new Person("James",48, 193, LocalDate.of(2000, Month.NOVEMBER, 1));
+                return Optional.of(new Person("James",48, 193, LocalDate.of(2000, Month.NOVEMBER, 1)));
             case 2:
-                return new Person("John", 62, 169, LocalDate.of(1989, Month.OCTOBER, 21));
-            case 0:
-                return null;
+                return Optional.of(new Person("John", 62, 169, LocalDate.of(1989, Month.OCTOBER, 21)));
             default:
-                return null;
+                return Optional.empty();
         }
     }
 
-    private String findAddress(Person person) {
-        if (person.getBirthDate().isAfter(LocalDate.of(2000, Month.JANUARY, 1))) {
-            return "";
-        }
-        if (person.getBirthDate().isAfter(LocalDate.of(1980, Month.JANUARY, 1))) {
-            return " Some St.   ";
-        }
-        return null;
+    private Optional<String> findAddress(Person person) {
+        return Optional.ofNullable(person)
+            .map(Person::getBirthDate)
+            .filter(bd -> !bd.isAfter(LocalDate.of(2000, Month.JANUARY, 1)))
+            .filter(bd -> bd.isAfter(LocalDate.of(1980, Month.JANUARY, 1)))
+            .map(bd -> " Some St.   ");
     }
 
-    private String findAddressById(int id) {
+    private Optional<String> findAddressById(int id) {
+        return findPerson(id)
+            .filter(p -> p.getHeight() > 168)
+            .flatMap(this::findAddress)
+            .filter(a -> !a.isEmpty())
+            .map(String::trim);
+/*
+
         final Person personOrNull = findPerson(id);
         if (personOrNull != null) {
             if (personOrNull.getHeight() > 168) {
@@ -40,7 +44,7 @@ class OptionalsRefactor {
                 }
             }
         }
-        return null;
+        return null;*/
     }
 
 
