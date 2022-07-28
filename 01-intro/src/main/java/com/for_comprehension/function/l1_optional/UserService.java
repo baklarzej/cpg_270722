@@ -1,4 +1,4 @@
-package com.for_comprehension.function.optional;
+package com.for_comprehension.function.l1_optional;
 
 import java.util.Optional;
 

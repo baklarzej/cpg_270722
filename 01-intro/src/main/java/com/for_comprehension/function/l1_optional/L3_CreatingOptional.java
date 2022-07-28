@@ -1,10 +1,8 @@
-package com.for_comprehension.function.optional;
+package com.for_comprehension.function.l1_optional;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-
-import com.for_comprehension.function.User;
 
 public class L3_CreatingOptional {
 

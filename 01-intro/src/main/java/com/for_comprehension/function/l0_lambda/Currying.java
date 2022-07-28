@@ -1,4 +1,4 @@
-package com.for_comprehension.function.lambda;
+package com.for_comprehension.function.l0_lambda;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
