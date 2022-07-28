@@ -46,7 +46,8 @@ class Optionals {
      * Supplier<String)
      */
     static BiFunction<Integer, Supplier<String>, String> L4_defaultValueMethodResult() {
-        return (id, function) -> findOneById(id).map(Person::getName)
+        return (id, function) -> findOneById(id)
+            .map(Person::getName)
             .orElseGet(function);
     }
 
