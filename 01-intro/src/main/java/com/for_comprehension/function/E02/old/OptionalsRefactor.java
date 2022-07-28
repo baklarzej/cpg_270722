@@ -3,9 +3,13 @@ package com.for_comprehension.function.E02.old;
 import java.time.LocalDate;
 import java.time.Month;
 
+/**
+ * @deprecated use {@link OptionalsFacade}
+ */
+@Deprecated(forRemoval = true)
 class OptionalsRefactor {
 
-    private Person findPerson(int id) {
+    Person findPerson(int id) {
         switch(id) {
             case 1:
                 return new Person("James",48, 193, LocalDate.of(2000, Month.NOVEMBER, 1));
@@ -18,7 +22,7 @@ class OptionalsRefactor {
         }
     }
 
-    private String findAddress(Person person) {
+    String findAddress(Person person) {
         if (person.getBirthDate().isAfter(LocalDate.of(2000, Month.JANUARY, 1))) {
             return "";
         }
@@ -28,7 +32,7 @@ class OptionalsRefactor {
         return null;
     }
 
-    private String findAddressById(int id) {
+    String findAddressById(int id) {
         final Person personOrNull = findPerson(id);
         if (personOrNull != null) {
             if (personOrNull.getHeight() > 168) {
@@ -48,7 +52,7 @@ class OptionalsRefactor {
     // DON"T CHANGE ANYTHING BEYOND THIS POINT
     // ***
 
-    private class Person {
+    public static class Person {
         private final String name;
         private final int weight;
         private final int height;
