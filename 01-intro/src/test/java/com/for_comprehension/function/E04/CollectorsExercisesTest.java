@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 import org.junit.Test;
 
@@ -29,7 +30,7 @@ public class CollectorsExercisesTest {
     @Test
     public void l2_toLinkedList() {
         // when
-        final List<String> result = CollectorsExercises.L2_toLinkedList().apply(asList("foo"));
+        final List<String> result = CollectorsExercises.L2_toLinkedList().apply(Stream.of("foo"));
 
         // then
         assertThat(result)
