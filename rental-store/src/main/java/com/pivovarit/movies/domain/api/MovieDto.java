@@ -1,4 +1,4 @@
-package com.pivovarit.movies.api;
+package com.pivovarit.movies.domain.api;
 
 public class MovieDto {
     private final long id;

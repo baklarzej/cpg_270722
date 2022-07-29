@@ -1,21 +1,14 @@
-package com.pivovarit.movies.service;
-
-import com.pivovarit.movies.MovieConverter;
-import com.pivovarit.movies.MovieDescriptionsRepository;
-import com.pivovarit.movies.MoviePriceCalculator;
-import com.pivovarit.movies.api.MovieAddRequest;
-import com.pivovarit.movies.api.MovieDto;
-import com.pivovarit.movies.domain.Movie;
-import com.pivovarit.movies.domain.MovieId;
-import com.pivovarit.movies.domain.MovieType;
-import com.pivovarit.movies.repository.MovieRepository;
+package com.pivovarit.movies.domain;
 
 import java.util.Collection;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static com.pivovarit.movies.MovieConverter.from;
+import com.pivovarit.movies.domain.api.MovieAddRequest;
+import com.pivovarit.movies.domain.api.MovieDto;
+
+import static com.pivovarit.movies.domain.MovieConverter.from;
 
 public class MovieService {
 

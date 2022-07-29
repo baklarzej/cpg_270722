@@ -1,4 +1,4 @@
-package com.pivovarit.movies.api;
+package com.pivovarit.movies.domain.api;
 
 import java.util.Objects;
 

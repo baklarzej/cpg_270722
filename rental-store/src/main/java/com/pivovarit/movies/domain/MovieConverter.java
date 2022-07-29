@@ -1,12 +1,9 @@
-package com.pivovarit.movies;
+package com.pivovarit.movies.domain;
 
-import com.pivovarit.movies.api.MovieAddRequest;
-import com.pivovarit.movies.api.MovieDto;
-import com.pivovarit.movies.domain.Movie;
-import com.pivovarit.movies.domain.MovieId;
-import com.pivovarit.movies.domain.MovieType;
+import com.pivovarit.movies.domain.api.MovieAddRequest;
+import com.pivovarit.movies.domain.api.MovieDto;
 
-public final class MovieConverter {
+final class MovieConverter {
 
     public static Movie from(MovieAddRequest request) {
         return new Movie(new MovieId(request.getId()), request.getTitle(), MovieType.valueOf(request.getType()));

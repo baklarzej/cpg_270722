@@ -1,19 +1,12 @@
-package com.pivovarit.movies.repository;
+package com.pivovarit.movies.domain;
 
-import com.pivovarit.movies.domain.Movie;
-import com.pivovarit.movies.domain.MovieId;
-import com.pivovarit.movies.domain.MovieType;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionManager;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.Optional;
-
-public class JdbcTemplateMovieRepository implements MovieRepository {
+ class JdbcTemplateMovieRepository implements MovieRepository {
 
     private final JdbcTemplate jdbcTemplate;
 

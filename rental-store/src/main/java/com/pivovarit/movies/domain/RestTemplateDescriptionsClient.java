@@ -1,8 +1,8 @@
-package com.pivovarit.movies;
+package com.pivovarit.movies.domain;
 
 import org.springframework.web.client.RestTemplate;
 
-public class RestTemplateDescriptionsClient implements MovieDescriptionsRepository{
+class RestTemplateDescriptionsClient implements MovieDescriptionsRepository {
 
     private final String url;
     private final RestTemplate restTemplate;

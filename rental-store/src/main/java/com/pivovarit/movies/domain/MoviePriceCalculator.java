@@ -1,8 +1,8 @@
-package com.pivovarit.movies;
+package com.pivovarit.movies.domain;
 
 import com.pivovarit.movies.domain.Movie;
 
-public class MoviePriceCalculator {
+class MoviePriceCalculator {
     private final long priceNew;
     private final long priceRegular;
     private final long priceOld;

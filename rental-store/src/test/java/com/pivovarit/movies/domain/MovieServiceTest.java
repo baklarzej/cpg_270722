@@ -1,18 +1,15 @@
 package com.pivovarit.movies.domain;
 
-import com.pivovarit.movies.MoviePriceCalculator;
-import com.pivovarit.movies.api.MovieAddRequest;
-import com.pivovarit.movies.api.MovieDto;
+import com.pivovarit.movies.domain.api.MovieAddRequest;
+import com.pivovarit.movies.domain.api.MovieDto;
 import com.pivovarit.movies.repository.InMemoryMovieRepository;
-import com.pivovarit.movies.service.MovieService;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MovieServiceTest {
 
-    @Test
+    @RepeatedTest(10000)
     void should_add_movie() {
         MovieService service = inMemoryInstance();
         MovieAddRequest newMovie = new MovieAddRequest(1, "Spiderman", "REGULAR");

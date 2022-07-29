@@ -1,7 +1,7 @@
 package com.pivovarit.movies.domain;
 
-import com.pivovarit.movies.api.MovieAddRequest;
-import com.pivovarit.movies.api.MovieDto;
+import com.pivovarit.movies.domain.api.MovieAddRequest;
+import com.pivovarit.movies.domain.api.MovieDto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

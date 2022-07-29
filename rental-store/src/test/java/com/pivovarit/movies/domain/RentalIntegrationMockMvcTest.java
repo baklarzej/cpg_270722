@@ -1,8 +1,8 @@
 package com.pivovarit.movies.domain;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pivovarit.movies.api.MovieAddRequest;
-import com.pivovarit.movies.api.MovieDto;
+import com.pivovarit.movies.domain.api.MovieAddRequest;
+import com.pivovarit.movies.domain.api.MovieDto;
 import com.pivovarit.movies.repository.InMemoryMovieRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
